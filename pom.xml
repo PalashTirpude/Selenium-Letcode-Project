@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.letcode-project</groupId>
+    <artifactId>letcode</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <central.framework.version>1.0.1-SNAPSHOT</central.framework.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.11.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.selenium-framework</groupId>
+            <artifactId>date-util</artifactId>
+            <version>${central.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.selenium-framework</groupId>
+            <artifactId>excel-utils</artifactId>
+            <version>${central.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.selenium-framework</groupId>
+            <artifactId>generic-utils</artifactId>
+            <version>${central.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.selenium-framework</groupId>
+            <artifactId>logging-util</artifactId>
+            <version>${central.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.selenium-framework</groupId>
+            <artifactId>report-util</artifactId>
+            <version>${central.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.selenium-framework</groupId>
+            <artifactId>selenium-driver-util</artifactId>
+            <version>${central.framework.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.selenium-framework</groupId>
+            <artifactId>assert-util</artifactId>
+            <version>${central.framework.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
