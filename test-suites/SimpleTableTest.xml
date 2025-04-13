@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Letcode Application Suite">
+    <parameter name="browser" value="EDGE"/>
+    <parameter name="testName" value="Simple Table Test"/>
+    <test name="Simple Table Test">
+        <classes>
+            <class name="com.letcode.automation.test.SimpleTableTest"/>
+        </classes>
+    </test>
+</suite>
