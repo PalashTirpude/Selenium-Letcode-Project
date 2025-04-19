@@ -1,7 +1,7 @@
 package com.letcode.automation.listeners;
 
-import com.central.framework.genericutils.LoadProperties;
 import com.central.framework.selenium.DriverInitializer;
+import com.central.framework.selenium.LoadProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
@@ -19,7 +19,7 @@ public class BaseClassListener implements ISuiteListener {
     @Override
     public void onStart(ISuite suite) {
         testParameters=new HashMap<>();
-        driverProperties=LoadProperties.fromFile("src/test/resources/driver-config.properties");
+        driverProperties= LoadProperties.fromFile("src/test/resources/driver-config.properties");
         XmlSuite xmlSuite=suite.getXmlSuite();
         testParameters.put("browser",xmlSuite.getParameter("browser"));
         testParameters.put("testName",xmlSuite.getParameter("testName"));
