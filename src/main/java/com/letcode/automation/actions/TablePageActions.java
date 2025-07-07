@@ -13,10 +13,11 @@ import java.util.Map;
 @Getter
 public class TablePageActions {
     TablePage tablePage=new TablePage();
-    int calculatedTotalFromShoppingListTable;
+    private int calculatedTotalFromShoppingListTable;
+    private Map<String,Integer> shoppingListTable;
 
     public void fetchShoppingListTable(){
-        Map<String,Integer> shoppingListTable=new HashMap<>();
+        shoppingListTable=new HashMap<>();
         WebDriverActions.findElements(tablePage.getShoppingListTableRow()).forEach(row->{
             List<WebElement> columns=row.findElements(By.xpath("./td"));
             shoppingListTable.put(columns.get(0).getText(),Integer.parseInt(columns.get(1).getText()));
