@@ -21,9 +21,10 @@ public class SimpleTableTest {
         context=new AnnotationConfigApplicationContext(SimpleTableConfig.class);
     }
 
+    @SuppressWarnings("rawtypes")
     @Test(priority =1, description = "Check summation of prices of items = Total in table footer")
     private void checkTotalPrice(){
-        Map<String,String> list=context.getBean("fetchShoppingListTable", Map.class);
+        Map list=context.getBean("fetchShoppingListTable", Map.class);
         CustomAssert.assertTrueHard(context.getBean("fetchShoppingListTable", Map.class).containsKey("Corn"),"Check table List contains key :  Corn");
         CustomAssert.assertEqualsHard(context.getBean("fetchShoppingListTableCalculatedTotalPrice",Integer.class)
                 ,context.getBean("fetchShoppingListTableCalculatedTotalPrice",Integer.class),"Check TotalPrice");
