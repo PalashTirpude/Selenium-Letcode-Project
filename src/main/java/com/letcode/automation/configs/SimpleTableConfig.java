@@ -4,6 +4,8 @@ import com.letcode.automation.actions.TablePageActions;
 import com.letcode.automation.pages.CommonPageObject;
 import org.springframework.context.annotation.Bean;
 
+import java.util.Map;
+
 public class SimpleTableConfig {
 
     TablePageActions tablePageActions=new TablePageActions();
@@ -13,6 +15,11 @@ public class SimpleTableConfig {
         CommonPageObject.navigateToCardLink("Table");
         tablePageActions.fetchShoppingListTable();
         return tablePageActions.getCalculatedTotalFromShoppingListTable();
+    }
+
+    @Bean
+    public Map<String,Integer> fetchShoppingListTable(){
+        return tablePageActions.getShoppingListTable();
     }
 
     @Bean
